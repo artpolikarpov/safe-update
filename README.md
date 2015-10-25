@@ -15,7 +15,11 @@ Docs.update('f7uJjPPQJP7Ytf3pE', {$set: {important: 1}});
 
 
 ## Mkay
-This package protects you from this and throws if there is no $-operators in the modifier.
+This package protects you from this and throws if there is no $-operators in the modifier:
+```
+Docs.update('f7uJjPPQJP7Ytf3pE', {important: 1});
+// /!\ Error: modifier doesn’t contain any $-operators...
+```
 
 But if you still want to rewrite the entire document, just pass the `replace:true` to the options object:
 ```
