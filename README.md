@@ -7,7 +7,7 @@ This is the story of of how the idea of this package came.
 ## Look out!
 The behavior of `collection.update` in Meteor a bit dangerous.
 
-If you forget to add a $set operator to a mongo modifier or and other $-operators (like $set, $unset, $inc, etc.), then it is instead interpreted as a literal document, and completely replaces whatever was previously in the database.
+If you forget to add a $set operator to a mongo modifier or any other $-operator (like $set, $unset, $inc, etc.), then it is instead interpreted as a literal document, and completely replaces whatever was previously in the database.
 You may accidentally lose a document if you write this:
 ```
 Docs.update('f7uJjPPQJP7Ytf3pE', {important: 1});
