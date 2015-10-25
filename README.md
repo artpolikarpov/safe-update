@@ -30,7 +30,7 @@ meteor add artpolikarpov:safe-update
 Just use collection.update as usual. You will be warned in case of danger of replacing the docs.
 But if replacement of the whole document is what you need, force it using `replace:true`.
 
-✌️
+:ok_hand:
 
 ##License
 MIT
