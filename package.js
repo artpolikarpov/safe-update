@@ -2,7 +2,7 @@ Package.describe({
     name: 'artpolikarpov:safe-update',
     version: '1.0.0',
     // Brief, one-line summary of the package.
-    summary: '',
+    summary: 'Make Meteor’s collection.update safer',
     // URL to the Git repository containing the source code for this package.
     git: 'https://github.com/artpolikarpov/safe-update.git',
     // By default, Meteor will default to using README.md for documentation.
