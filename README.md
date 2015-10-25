@@ -34,7 +34,7 @@ meteor add artpolikarpov:safe-update
 ```
 
 ## Usage
-Just use `[collection.update](http://docs.meteor.com/#/full/update)` as usual. You will be warned in case of danger of replacing the docs.
+Just use [collection.update](http://docs.meteor.com/#/full/update) as usual. You will be warned in case of danger of replacing the docs.
 But if replacement of the whole document is what you need, force it using `replace:true`.
 
 :ok_hand:
