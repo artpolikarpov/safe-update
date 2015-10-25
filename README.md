@@ -39,5 +39,5 @@ But if replacement of the whole document is what you need, force it using `repla
 
 :ok_hand:
 
-##License
+## License
 MIT
