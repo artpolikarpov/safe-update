@@ -28,7 +28,7 @@ id-map@1.0.4
 insecure@1.0.4
 jquery@1.11.4
 livedata@1.0.15
-local-test:artpolikarpov:safe-update@1.0.1
+local-test:artpolikarpov:safe-update@1.0.2
 logging@1.0.8
 meteor@1.1.9
 meteor-base@1.0.1
