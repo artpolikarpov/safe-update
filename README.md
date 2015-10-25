@@ -1,4 +1,9 @@
 # Safer collection.update
+
+I’ve recently erased 45 docs in the database because of the stupid behavior `collection.update`.
+
+This is the story of of how the idea of this package came.
+
 ## Look out!
 The behavior of `collection.update` in Meteor a bit dangerous.
 
