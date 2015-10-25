@@ -9,7 +9,9 @@ Docs.update('f7uJjPPQJP7Ytf3pE', {important: 1});
 ```
 
 ...instead of this:
+```
 Docs.update('f7uJjPPQJP7Ytf3pE', {$set: {important: 1}});
+```
 
 
 ## Mkay
