@@ -2,7 +2,7 @@
 ## Look out!
 The behavior of `collection.update` in Meteor a bit dangerous.
 
-If you forget to add a $set operator to a modifier or and other $-operators (like $set, $unset, $inc, etc.), then it is instead interpreted as a literal document, and completely replaces whatever was previously in the database.
+If you forget to add a $set operator to a mongo modifier or and other $-operators (like $set, $unset, $inc, etc.), then it is instead interpreted as a literal document, and completely replaces whatever was previously in the database.
 You may accidentally lose a document if you write this:
 ```
 Docs.update('f7uJjPPQJP7Ytf3pE', {important: 1});
@@ -27,7 +27,7 @@ meteor add artpolikarpov:safe-update
 ```
 
 ## Usage
-Just use collection.update as usual. You will be warned in case of danger of replacing the docs.
+Just use `[collection.update](http://docs.meteor.com/#/full/update)` as usual. You will be warned in case of danger of replacing the docs.
 But if replacement of the whole document is what you need, force it using `replace:true`.
 
 :ok_hand:
