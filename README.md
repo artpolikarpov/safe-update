@@ -1,4 +1,4 @@
-# Safe update
+# Safer collection.update
 ## Look out!
 The behavior of `collection.update` in Meteor a bit dangerous.
 
