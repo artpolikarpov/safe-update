@@ -24,6 +24,7 @@ Docs.update('f7uJjPPQJP7Ytf3pE', {important: 1});
 But if you still want to rewrite the entire document, just pass the `replace:true` to the options object:
 ```
 Docs.update('f7uJjPPQJP7Ytf3pE', {deleted: 1}, {replace: true});
+// → One doc updated successfully
 ```
 
 
