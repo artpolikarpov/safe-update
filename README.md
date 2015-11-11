@@ -44,15 +44,13 @@ But if replacement of the whole document is what you need, force it using `repla
 
 ### Applying to specific collections
 
-You can apply a plugin to a specific collections by passing an `except` or `only` option to the `SAFE_UPDATE_CONFIG` global variable. This is useful for tests and collections from third-party packages.
+You can apply a plugin to specific collections by passing an `except` or `only` option to the `SAFE_UPDATE_CONFIG` global variable. This is useful for tests and collections from third-party packages.
 ```
 SAFE_UPDATE_CONFIG = {
   except: ['TestCollection']
   // or only: ['Foo', 'Bar']
 };
 ```
-
-In the above example, the dataNotFound will be applied to all routes except the route named 'server.route'.
 
 :ok_hand:
 
