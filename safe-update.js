@@ -1,8 +1,21 @@
-var CollectionOriginal = typeof Mongo !== "undefined" ? Mongo.Collection : Meteor.Collection,
-    updateOriginal = CollectionOriginal.prototype.update;
+var CollectionOriginal = typeof Mongo !== 'undefined' ? Mongo.Collection : Meteor.Collection,
+    updateOriginal = CollectionOriginal.prototype.update,
+    emptyConfig = {},
+    getConfig = function () {
+        if (typeof SAFE_UPDATE_CONFIG !== 'undefined') {
+            return SAFE_UPDATE_CONFIG;
+        } else {
+            return emptyConfig;
+        }
+    };
 
 CollectionOriginal.prototype.update = function (selector, modifier, options, callback) {
-    var okToUpdate = !modifier || options && options.replace;
+    var config = getConfig();
+    var collectionName = this._name;
+    var okToUpdate = !modifier
+        || options && options.replace
+        || (config.except && _.include(config.except, collectionName))
+        || config.only && !_.include(config.only, collectionName);
 
     if (!okToUpdate) {
         okToUpdate = _.some(modifier, function (value, operator) {
