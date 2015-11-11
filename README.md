@@ -42,7 +42,7 @@ meteor add artpolikarpov:safe-update
 Just use [collection.update](http://docs.meteor.com/#/full/update) as usual. You will be warned in case of danger of replacing the docs.
 But if replacement of the whole document is what you need, force it using `replace:true`.
 
-## Applying to specific collections
+### Applying to specific collections
 
 You can apply a plugin to a specific collections by passing an `except` or `only` option to the `SAFE_UPDATE_CONFIG` global variable. This is useful for tests and collections from third-party packages.
 ```
