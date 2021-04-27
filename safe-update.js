@@ -10,6 +10,11 @@ var CollectionOriginal = typeof Mongo !== 'undefined' ? Mongo.Collection : Meteo
     };
 
 CollectionOriginal.prototype.update = function (selector, modifier, options, callback) {
+    var allowEmptySelector = options && options.allowEmptySelector;
+    if (!allowEmptySelector && _.isEmpty(selector)) {
+        throw new Meteor.Error(500, 'selector is empty');
+    }
+
     var config = getConfig();
     var collectionName = this._name;
     var okToUpdate = !modifier
@@ -19,7 +24,7 @@ CollectionOriginal.prototype.update = function (selector, modifier, options, cal
 
     if (!okToUpdate) {
         okToUpdate = _.some(modifier, function (value, operator) {
-           return /^\$/.test(operator);
+            return /^\$/.test(operator);
         });
     }
 
