@@ -12,7 +12,7 @@ var CollectionOriginal = typeof Mongo !== 'undefined' ? Mongo.Collection : Meteo
 CollectionOriginal.prototype.update = function (selector, modifier, options, callback) {
     var allowEmptySelector = options && options.allowEmptySelector;
     if (!allowEmptySelector && _.isEmpty(selector)) {
-        throw new Meteor.Error(500, 'selector is empty');
+        throw new Meteor.Error(500, 'selector is empty, if you want to use empty selector pass {allowEmptySelector:true} to the update options');
     }
 
     var config = getConfig();
